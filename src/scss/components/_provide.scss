@@ -1,0 +1,166 @@
+.provide {
+  padding: 108px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.provide-block {
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    @include big-desktop {
+      font-size: 72px;
+    }
+
+    @include tablet {
+      font-size: 52px;
+    }
+
+    @include small-tablet {
+      font-size: 42px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__bubble-anim {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    transition:
+      transform 0.3s,
+      gap 0.3s
+    ;
+    cursor: default;
+    gap: 4px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--black-color);
+    }
+
+    &--dream {
+      right: -3%;
+      top: -23%;
+
+      @include hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &--build {
+      left: 5%;
+      top: -36%;
+
+      @include hover {
+        transform: scale(1);
+        gap: 20px;
+      }
+    }
+
+    &--grow {
+      left: 20%;
+      bottom: -24%;
+
+      @include hover {
+        transform: scale(1.2) translate(10px, -10px);
+      }
+    }
+
+    @include big-desktop {
+      &--dream {
+        top: -40%;
+      }
+
+      &--build {
+        top: -42%;
+      }
+
+      &--grow {
+        bottom: -35%;
+      }
+    }
+
+    @include tablet {
+      padding: 8px 10px;
+
+      &--dream {
+        top: -50%;
+      }
+
+      &--build {
+        top: -45%;
+      }
+
+      &--grow {
+        bottom: -40%;
+      }
+    }
+  }
+
+  &__bubble-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}
+

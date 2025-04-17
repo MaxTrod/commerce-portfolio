@@ -1,0 +1,53 @@
+// ваш код
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  min-width: 360px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 106px;
+    gap: 30px;
+
+    @include tablet {
+      min-height: 70px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-right: 145px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
+  }
+}
+
+

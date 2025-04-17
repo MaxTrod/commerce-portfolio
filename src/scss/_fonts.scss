@@ -1,0 +1,9 @@
+// Inter Display
+@include font-face("Inter Display", "../fonts/InterDisplay-Regular", 400, normal);
+@include font-face("Inter Display", "../fonts/InterDisplay-Medium", 500, normal);
+@include font-face("Inter Display", "../fonts/InterDisplay-SemiBold", 600, normal);
+@include font-face("Inter Display", "../fonts/InterDisplay-Bold", 700, normal);
+
+// Helvetica
+@include font-face("Helvetica", "../fonts/Helvetica", 400, normal);
+@include font-face("Helvetica", "../fonts/Helvetica-Bold", 700, normal);

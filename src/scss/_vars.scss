@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter Display", sans-serif;
+  --second-family: "Helvetica", sans-serif;
+  --content-width: 1360px;
+  --container-offset: 40px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --main-color: #fff;
+  --digital-green-color: #9333EA;
+  --black-color: #0F172A;
+  --decor-color: #727272;
+
+  // focus
+  --outline: 1px dashed currentColor;
+  --outlineOffset: 3px;
+}

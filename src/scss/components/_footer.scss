@@ -1,0 +1,142 @@
+.footer {
+  padding: 100px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__rating {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include small-tablet {
+      width: 148px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @include big-desktop {
+      font-size: 54px;
+    }
+
+    @include tablet {
+      font-size: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__title-link {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--digital-green-color);
+    transition: gap 0.3s, color 0.3s;
+    gap: 5px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--main-color);
+      transform: translateY(10px);
+      transition:
+        width 0.3s,
+        height 0.3s
+      ;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 4px;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--digital-green-color);
+      transition: width 0.3s;
+
+      @include small-tablet {
+        bottom: 2px;
+        width: 100%;
+      }
+    }
+
+    @include focus-visible;
+
+    @include hover {
+      gap: 0;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      color: var(--decor-color);
+
+      &::after {
+        width: 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--main-color);
+
+    @include big-desktop {
+      font-size: 22px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+}

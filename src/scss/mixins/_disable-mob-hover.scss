@@ -1,0 +1,22 @@
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-visible {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: var(--outline);
+    outline-offset: var(--outlineOffset);
+  }
+}
+
+@mixin active {
+  fill: currentColor;
+}
